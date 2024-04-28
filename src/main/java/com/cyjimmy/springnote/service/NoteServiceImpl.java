@@ -14,12 +14,12 @@ public class NoteServiceImpl implements NoteService {
     private NoteRepository noteRepository;
 
     @Override
-    public Note saveNote(Note note) {
-        return null;
+    public void addNote(Note note) {
+        noteRepository.save(note);
     }
 
     @Override
     public List<Note> getAllNotes() {
-        return List.of();
+        return noteRepository.findAll();
     }
 }
