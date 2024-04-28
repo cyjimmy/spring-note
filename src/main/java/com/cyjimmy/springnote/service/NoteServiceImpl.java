@@ -14,8 +14,8 @@ public class NoteServiceImpl implements NoteService {
     private NoteRepository noteRepository;
 
     @Override
-    public void addNote(Note note) {
-        noteRepository.save(note);
+    public Note addNote(Note note) {
+        return noteRepository.save(note);
     }
 
     @Override
